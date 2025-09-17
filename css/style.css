@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  gap: 10px;
+  font-family: "Segoe UI", sans-serif;
+
+  grid-template-areas:
+    "header header"
+    "main   aside"
+    "footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 3fr 1fr;
+}
+
+/* Áreas do grid */
+header { grid-area: header; }
+main   { grid-area: main; }
+aside  { grid-area: aside; }
+footer { grid-area: footer; }
+
+/* Estilização visual */
+header, main, section, aside, footer {
+  background-color: #05bda5;
+  border: 5px solid #930589;
+  padding: 40px;
+  border-radius: 6px;
+}
+
+header h1 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3b2a1f;
+  font-weight: bold;
+}
+
+article {
+  margin-bottom: 18px;
+}
+
+article h2 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+aside h2 {
+  margin-bottom: 10px;
+}
+
+aside article {
+  margin-bottom: 12px;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+}
